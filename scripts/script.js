@@ -39,15 +39,15 @@ function displaypets(pets) {
     displaypetsCtg.innerHTML = `
     
             <div class="">
-              <img class=" rounded-lg" src="./assets/739f0c9c-b653-4a8d-97f7-888895527627.jpeg" alt="">
+              <img class=" rounded-lg" src="${petli.image}" alt="">
               
             </div>
             <div class="border-b-[0.5px] border-gray-400" >
-              <p class="pt-2">Mister Tartost</p>
-              <p class="pt-2"><span><i class="fa-solid fa-square"></i></span></p>
-              <p class="pt-2"><span><i class="fa-solid fa-cake-candles"></i></span></p>
-              <p class="pt-2"><span><i class="fa-solid fa-venus"></i></span></p>
-              <p class="pt-2 pb-4"><span><i class="fa-solid fa-dollar-sign"></i></span></p>
+              <p class="pt-2 font-bold text-xl">${petli.pet_name}</p>
+              <p class="pt-2"><span class="mr-2"><i class="fa-solid fa-square"></i></span>Breed: ${petli.breed}</p>
+              <p class="pt-2"><span class="mr-2"><i class="fa-solid fa-cake-candles"></i></span>Birth: ${petli.date_of_birth}</p>
+              <p class="pt-2"><span class="mr-2"><i class="fa-solid fa-venus"></i></span>Gender: ${petli.gender}</p>
+              <p class="pt-2 pb-4"><span class="mr-2"><i class="fa-solid fa-dollar-sign"></i></span>Price: ${petli.price}</p>
 
             </div>
             <div class="pt-4 flex items-center justify-between">
