@@ -1,3 +1,16 @@
+function loadpetCategories(id) {
+  fetch(`https://openapi.programming-hero.com/api/peddy/category/${id}`)
+    .then((res) => res.json())
+    .then((data) => {
+      // console.log(data.data);
+      displaypets(data.data);
+
+      // console.log("Full response:", data);
+      // console.log("Trying to access category:", data.category);
+    })
+    .catch((err) => console.log("Err", err));
+}
+
 function loadbuttons() {
   fetch("https://openapi.programming-hero.com/api/peddy/categories")
     .then((res) => res.json())
@@ -12,7 +25,7 @@ function displaybuttons(buttons) {
     // console.log(btn.category_icon);
     const createBtn = document.createElement("div");
     createBtn.innerHTML = `
-    <button class="btn py-10 px-12 rounded-lg"><span>
+    <button onclick="loadpetCategories('${btn.category}')" class="btn py-10 px-12 rounded-lg"><span>
          <img class="w-[80%]" src="${btn.category_icon}" alt=""> 
     </span><span class="text-xl font-bold">${btn.category}s</span></button>
     `;
@@ -30,10 +43,11 @@ function loadpets() {
     .then((data) => displaypets(data.pets));
 }
 function displaypets(pets) {
-  console.log(pets);
+  // console.log(pets);
   const petsCategory = document.getElementById("pets-ctg");
+  petsCategory.innerHTML = "";
   pets.forEach((petli) => {
-    console.log(petli);
+    // console.log(petli);
     const displaypetsCtg = document.createElement("div");
     displaypetsCtg.classList = "shadow-md p-6 rounded-md";
     displaypetsCtg.innerHTML = `
