@@ -100,7 +100,9 @@ function displaypets(pets) {
 
             </div>
             <div class="pt-4 flex items-center justify-between">
-              <button class="btn rounded-md px-6"><span><i class="fa-solid fa-thumbs-up"></i></span></button>
+              <button onclick="likebutton('${
+                petli.image
+              }')" class="btn rounded-md px-6"><span><i class="fa-solid fa-thumbs-up"></i></span></button>
               <button class="btn rounded-md px-6 text-[#0E7A81]">Adopt</button>
               <button onclick="loaddetailsbuttonMdl('${
                 petli.petId
@@ -161,3 +163,18 @@ function displaypetsMdl(petDetails) {
 }
 
 // loaddetailsbuttonMdl();
+
+// likeButton-------------------------
+
+function likebutton(petimg) {
+  // console.log(petimg);
+  const lkpetsdiv = document.getElementById("likedPets");
+  const lkimg = document.createElement("img");
+
+  lkimg.src = petimg; // getting the image url at petimg so that's why added directly to lkimg.src
+  lkimg.classList.add("w-full", "rounded-md");
+
+  lkpetsdiv.appendChild(lkimg);
+}
+
+// likebutton();

@@ -104,19 +104,19 @@
       </div>
         <!-- Image Part -->
         <div class="shadow-sm p-6 ">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <img class="" src="./assets/739f0c9c-b653-4a8d-97f7-888895527627.jpeg" alt="">
-          <img class="" src="./assets/739f0c9c-b653-4a8d-97f7-888895527627.jpeg" alt="">
+          <div id="likedPets" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <!-- <img class="" src="./assets/739f0c9c-b653-4a8d-97f7-888895527627.jpeg" alt="">
+          <img class="" src="./assets/739f0c9c-b653-4a8d-97f7-888895527627.jpeg" alt=""> -->
             
           </div>
         </div>
         </div>
         <!-- pet category ends -->
       </section>
-      <script src="./scripts/script.js"></script>
+     
     </main>
-    <!-- Open the modal using ID.showModal() method -->
-      <button id="showDetailsModal" class="btn" onclick="petdetailsModal.showModal()">open modal</button>
+    <!--Details Modal Open the modal using ID.showModal() method -->
+      <button id="showDetailsModal" class="btn hidden" onclick="petdetailsModal.showModal()">open modal</button>
       <dialog id="petdetailsModal" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box">
           <div id="detailsModal">
@@ -130,8 +130,38 @@
           </div>
         </div>
       </dialog>
-      <!-- Modal Ends -->
+      <!--Details Modal Ends -->
 
-    <footer></footer>
+    <footer class="bg-black">
+      <section class="max-w-screen-2xl mx-auto flex justify-between items-start pb-12 pt-6">
+        <div>
+          <div class="flex items-center gap-1">
+            <img  src="./assets/logo.webp" alt="" />
+            <p class="font-bold text-2xl">
+              <span class="text-white">Pet</span><span class="text-[#0E7A81]">Bro</span>
+            </p>
+          </div>
+          <p class="text-white pt-3">Location: Dhaka, Bangladesh</p>
+          <p class="text-white pt-3">Phone: 000000000000</p>
+          <p class="text-white pt-3">Email: petbro@gmail.com</p>
+          <p class="text-white pt-3">Opening-Hours: 09:00 - 06:00 Pm</p>
+
+        </div>
+        <div class="flex flex-col">
+          <p class="text-white font-bold">Useful Links</p>
+          <a class="text-white pt-3" href="">Home</a>
+          <a class="text-white pt-3" href="">About Us</a>
+          <a class="text-white pt-3" href="">Pets</a>
+          <a class="text-white pt-3" href="">Contact</a>
+
+        </div>
+        <div class="flex flex-col gap-3 ">
+          <p class="text-white font-bold text-xl ">Drop a Message</p>
+          <input class=" text-white p-2 rounded-md border-none bg-slate-950" type="text" name="" id="" placeholder="Enter Your Email">
+          <button class="btn bg-[#0E7A81] text-white border-none">Subscribe</button>
+        </div>
+      </section>
+    </footer>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
